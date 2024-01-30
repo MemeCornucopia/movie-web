@@ -22,7 +22,6 @@ export function WatchingPart() {
 
   const sortedProgressItems = useMemo(() => {
     let output: MediaItem[] = [];
-
     Object.entries(progressItems)
       .filter((entry) => shouldShowProgress(entry[1]).show)
       .sort((a, b) => b[1].updatedAt - a[1].updatedAt)
